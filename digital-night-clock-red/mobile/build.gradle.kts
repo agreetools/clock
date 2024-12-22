@@ -76,4 +76,6 @@ dependencies {
 
 //    wearApp(project(":wear"))
     implementation(project(":myAndroid"))
+    implementation(libs.androidx.monitor)
+    implementation(libs.androidx.junit.ktx)
 }
