@@ -6,6 +6,7 @@
 package com.agreetools.digitalnightclockred.presentation
 
 
+import android.content.Intent
 import android.content.res.Configuration
 import android.os.Bundle
 import android.view.WindowManager
@@ -42,6 +43,12 @@ class MainActivity : ComponentActivity() {
 
         super.onCreate(savedInstanceState)
 
+
+
+
+
+
+
 //         val lp = this.window.attributes
 ////        lp.screenBrightness = WindowManager.LayoutParams.BRIGHTNESS_OVERRIDE_OFF
 //        lp.screenBrightness = WindowManager.LayoutParams.BRIGHTNESS_OVERRIDE_FULL
@@ -73,6 +80,7 @@ class MainActivity : ComponentActivity() {
 }
 
 
+
 fun LightOn(window: android.view.Window) {
     val MyWindow = window
     val winParams = MyWindow.attributes
@@ -93,16 +101,16 @@ fun WearApp( window: android.view.Window)   {
 
 
 
-    var light by remember { mutableStateOf(false) } // Initialize with false
-
-
-    LaunchedEffect(light) {
-        if (light) {
-            LightOn(window)
-        }else{
-            LightOff(window)
-        }
-    }
+//    var light by remember { mutableStateOf(false) } // Initialize with false
+//
+//
+//    LaunchedEffect(light) {
+//        if (light) {
+//            LightOn(window)
+//        }else{
+//            LightOff(window)
+//        }
+//    }
 
 
     val myTime = MyTime()
@@ -130,18 +138,19 @@ fun WearApp( window: android.view.Window)   {
 
 
         Column {
-            Button(
-                modifier = Modifier
-                    .fillMaxWidth(0.2f)
-                    .align(Alignment.CenterHorizontally),
-
-                onClick = { light = !light }
-
-            ) {
-                Text( text = "${if (light) "On" else "Off"}")
-
-            }
+//            Button(
+//                modifier = Modifier
+//                    .fillMaxWidth(0.2f)
+//                    .align(Alignment.CenterHorizontally),
+//
+//                onClick = { light = !light }
+//
+//            ) {
+//                Text( text = "${if (light) "On" else "Off"}")
+//
+//            }
             Clock(text)
+
 
         }
     }
