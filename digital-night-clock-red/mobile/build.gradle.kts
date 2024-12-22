@@ -12,8 +12,9 @@ android {
         applicationId = "com.agreetools.digitalnightclockred"
         minSdk = 34
         targetSdk = 35
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 3
+        versionName = "1.$versionCode"
+
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
